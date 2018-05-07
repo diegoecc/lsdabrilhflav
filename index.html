@@ -1,0 +1,169 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, user=scalable=no, initial-scale=1.0, maximum-scale=1.0, minimun-scale=1.0">
+	<title>Usuarios por Hora por Fecha</title>
+	<link rel="stylesheet" href="estilos.css">
+	<link rel="stylesheet" href="font-awesome.css">
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="main.js"></script>
+</head>
+
+<body>
+	<div class="wrap">
+		<ul class="tabs">
+			<li><a href="#tab1"><span class="fa fa-tachometer" aria-hidden="true"></span><span class="tab-text">Usuarios por Hora por Fecha</span></a></li>
+		</ul>
+
+		<div class ="secciones">
+		
+			<article id = "tab1">
+			
+			<center><h1>Audiencia tvgo Live Perú de Lunes a Viernes - Abril
+			</h1></center>
+			
+			<br>
+			<br>
+
+   			<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+   			<script type="text/javascript">
+      		google.charts.load('current', {'packages':['corechart']});
+      		google.charts.setOnLoadCallback(drawChart);
+
+      		function drawChart() {
+        	var data = google.visualization.arrayToDataTable([
+			['Fecha','Desktop','App','MobileWeb'],
+			['02/04',2506,1119,86],
+			['03/04',2664,1687,87],
+			['04/04',3010,2033,102],
+			['05/04',2560,1680,84],
+			['06/04',2457,1709,88],
+			['09/04',2654,1464,86],
+			['10/04',2780,1715,100],
+			['11/04',3274,2356,163],
+			['12/04',2574,1752,96],
+			['13/04',2427,1754,87],
+			['16/04',2526,1503,83],
+			['17/04',2485,1748,89],
+			['18/04',2702,1811,103],
+			['19/04',2676,1895,107],
+			['20/04',2563,1837,93],
+			['23/04',2238,1523,80],
+			['24/04',2302,1806,83],
+			['25/04',3697,4099,198],
+			['26/04',2428,2373,121],
+			['27/04',2530,2125,101],
+			['30/04',2145,1656,63]
+	        ]);
+
+	        var options = {
+	          title: 'PROMEDIO USUARIOS POR DIA POR HORA - PLATAFORMA',
+	          curveType: 'function',
+	          legend: { position: 'bottom left' }
+	        };
+
+		    var chart = new google.visualization.LineChart(document.getElementById('curve_chart1'));
+
+		    chart.draw(data, options);
+		    }
+		    </script>
+		    <div id="curve_chart1" style="width: automatic; height: automatic"></div>
+
+		<br>
+
+			<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+			<script type="text/javascript">
+			google.charts.load('current', {'packages':['corechart']});
+			google.charts.setOnLoadCallback(drawChart);
+
+		     function drawChart() {
+		        var data = google.visualization.arrayToDataTable([
+			['Fecha','Total'],
+			['02/04',3711],
+			['03/04',4438],
+			['04/04',5145],
+			['05/04',4324],
+			['06/04',4254],
+			['09/04',4204],
+			['10/04',4595],
+			['11/04',5793],
+			['12/04',4421],
+			['13/04',4267],
+			['16/04',4112],
+			['17/04',4322],
+			['18/04',4616],
+			['19/04',4678],
+			['20/04',4492],
+			['23/04',3841],
+			['24/04',4191],
+			['25/04',7995],
+			['26/04',4922],
+			['27/04',4756],
+			['30/04',3864]
+	        ]);
+
+		        var options = {
+		          title: 'PROMEDIO USUARIOS TOTALES POR DIA POR HORA',
+		        };
+
+		        var chart = new google.visualization.SteppedAreaChart(document.getElementById('chart_div2'));
+
+		        chart.draw(data, options);
+		     	 }
+		    	</script>
+
+		   		<div id="chart_div2" style="width: automatic; height: automatic;"></div>
+
+		<br>
+
+   			<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    		<script type="text/javascript">
+      		google.charts.load('current', {'packages':['corechart']});
+      		google.charts.setOnLoadCallback(drawChart);
+
+      		function drawChart() {
+        	var data = google.visualization.arrayToDataTable([
+			['Fecha','Total'],
+			['02/04',14170],
+			['03/04',14333],
+			['04/04',14837],
+			['05/04',13284],
+			['06/04',13387],
+			['09/04',14780],
+			['10/04',17192],
+			['11/04',39129],
+			['12/04',15587],
+			['13/04',13983],
+			['16/04',14389],
+			['17/04',13565],
+			['18/04',15941],
+			['19/04',15878],
+			['20/04',14302],
+			['23/04',12793],
+			['24/04',13545],
+			['25/04',43762],
+			['26/04',20890],
+			['27/04',16727],
+			['30/04',11447]
+	        ]);
+
+        	var options = {
+          	 title: 'MAXIMO USUARIOS TOTALES POR DIA POR HORA',
+	          curveType: 'function',
+	          legend: { position: 'bottom left' }
+        	};
+
+        	var chart = new google.visualization.AreaChart(document.getElementById('chart_div3'));
+        	chart.draw(data, options);
+      		}
+    		</script>
+
+    		<div id="chart_div3" style="width: automatic; height: automatic;"></div>
+
+			</article>
+		</div>
+	</div>
+</body>
+</html>
